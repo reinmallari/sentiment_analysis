@@ -42,25 +42,45 @@ return [
             'synchronous' => null,
         ],
 
+        // 'mysql' => [
+        //       'driver' => 'mysql',
+        //       'url' => env('DB_URL'),
+        //       'host' => env('AZURE_MYSQL_HOST', '127.0.0.1'),
+        //       'port' => env('AZURE_MYSQL_PORT', '3306'),
+        //       'database' => env('AZURE_MYSQL_DBNAME', 'sentiment'),
+        //       'username' => env('AZURE_MYSQL_USERNAME', 'root'),
+        //       'password' => env('AZURE_MYSQL_PASSWORD', ''),
+        //       'unix_socket' => env('DB_SOCKET', ''),
+        //       'charset' => env('DB_CHARSET', 'utf8mb4'),
+        //       'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
+        //       'prefix' => '',
+        //       'prefix_indexes' => true,
+        //       'strict' => true,
+        //       'engine' => null,
+        //       'options' => extension_loaded('pdo_mysql') ? array_filter([
+        //           PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+        //       ]) : [],
+        //   ],
+
         'mysql' => [
-              'driver' => 'mysql',
-              'url' => env('DB_URL'),
-              'host' => env('AZURE_MYSQL_HOST', '127.0.0.1'),
-              'port' => env('AZURE_MYSQL_PORT', '3306'),
-              'database' => env('AZURE_MYSQL_DBNAME', 'laravel'),
-              'username' => env('AZURE_MYSQL_USERNAME', 'root'),
-              'password' => env('AZURE_MYSQL_PASSWORD', ''),
-              'unix_socket' => env('DB_SOCKET', ''),
-              'charset' => env('DB_CHARSET', 'utf8mb4'),
-              'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
-              'prefix' => '',
-              'prefix_indexes' => true,
-              'strict' => true,
-              'engine' => null,
-              'options' => extension_loaded('pdo_mysql') ? array_filter([
-                  PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-              ]) : [],
-          ],
+            'driver' => 'mysql',
+            'url' => env('DB_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'), // Use DB_HOST from .env
+            'port' => env('DB_PORT', '3306'), // Use DB_PORT from .env
+            'database' => env('DB_DATABASE', 'sentiment'), // Use DB_DATABASE from .env
+            'username' => env('DB_USERNAME', 'root'), // Use DB_USERNAME from .env
+            'password' => env('DB_PASSWORD', ''), // Use DB_PASSWORD from .env
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => env('DB_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
 
         'mariadb' => [
             'driver' => 'mariadb',

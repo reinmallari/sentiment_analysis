@@ -1,0 +1,20 @@
+:root {
+  --gray: #262626;
+  --red: #ED1C24;
+  --light-gray: #444444;
+  --blue: #22313F;
+  --yellow: #F3C200;
+  --violet: #44B6AE;
+}
+
+html, body {
+	/* background-color: Black; */
+	font-family: 'Montserrat';
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}

@@ -1,0 +1,222 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    background-color: #fafafa;
+    color: #262626;
+}
+
+.hide{
+  display: none;
+}
+
+.app-wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #262626;
+    color: #fafafa;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    background-color: #262626;
+    border-bottom: 2px solid #FAFAFA;
+}
+
+.sidebar-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu ul li {
+    margin: 15px 0;
+}
+
+.sidebar-menu ul li a {
+    display: block;
+    border-radius: 5px;
+    padding: 15px 20px;
+    color: #fafafa;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-menu ul li a:hover,
+.sidebar-menu ul li a.active {
+    background-color: #ed1c24;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    background-color: #f4f6f8;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+}
+
+.header-content h1 {
+    font-size: 2rem;
+    color: #ed1c24;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.content-section {
+  padding: 30px;
+  width: 100%;
+  max-height: 800px;
+  overflow: auto;
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fafafa;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #ed1c24;
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: #ed1c24;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #262626;
+}
+
+/* Results */
+.results {
+    margin-top: 20px;
+}
+
+.result-box {
+    padding: 15px;
+    background-color: #f1f3f5;
+    border-radius: 5px;
+}
+
+.result-text {
+  font-size: 1.2em;
+  color: #ed1c24;
+  font-weight: bold;
+}
+
+.result-text strong {
+    font-weight: 700;
+}
+
+/* List of Entered Text */
+.text-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.text-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1rem;
+}
+
+.text-list li strong {
+    color: #007BFF;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100px;
+    }
+
+    .sidebar-menu ul li a {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* tables */
+table{
+  width: 100% !important;
+}
+
+table th{
+  background: #262626;
+  color: #FAFAFA;
+  text-align: center;
+}
+
+table td {
+    max-width: 250px; /* Set your desired max width */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflowed text */
+}
+/* tables */
